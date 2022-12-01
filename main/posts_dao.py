@@ -55,7 +55,7 @@ class PostsDAO:
         user_posts = []
 
         for post in posts:
-            if post.poster_name.lpwer() == user_name.lower():
+            if post.poster_name.lower() == user_name.lower():
                 user_posts.append(post)
         return user_posts
 
@@ -80,7 +80,7 @@ class PostsDAO:
         # список для постов по ключевому слову
         new_posts = []
         for post in posts:
-            if query.lower() == post.content.lower():
+            if query.lower() in post.content.lower():
                 new_posts.append(post)
         return new_posts
 

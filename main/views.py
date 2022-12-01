@@ -1,8 +1,8 @@
 from flask import render_template, request, Blueprint, redirect
-from main.post_dao import PostsDAO
+from main.posts_dao import PostsDAO
 
 main_blueprint = Blueprint('main_blueprint', __name__, template_folder='./templates')
-posts = PostsDAO('./data/post.json', '/data/comments.json')
+posts = PostsDAO('./data/posts.json', './data/comments.json')
 
 
 @main_blueprint.route('/')

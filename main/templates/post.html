@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SKYPROGRAM post</title>
-  <link href="../../static/css/styles.min.css" rel="stylesheet">
+  <link href="/static/css/styles.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -28,18 +28,18 @@
     <section class="items">
       <div class="items__item item item--post">
         <div class="item__top">
-          <a href="/users/{{ post.poster_name }} class="item__head">
+          <a href="/users/{{ post.poster_name }}" class="item__head">
             <div class="item__ava-wrap">
               <img src="{{ post.poster_avatar }}" alt="" class="item__ava" width="47">
             </div>
             <span class="item__username">{{ post.poster_name }}</span>
           </a>
           <button type="button" class="item__bookmark-btn">
-            <img src="../../static/img/bookmark.png" alt="" class="item__bookmark-icon" width="24">
+            <img src="/static/img/bookmark.png" alt="" class="item__bookmark-icon" width="24">
           </button>
         </div>
         <a href="" class="item__post-link">
-          <img src="../../static/img/post1.jpg" alt="" width="348" class="item__post-img">
+          <img src="/static/img/post1.jpg" alt="" width="348" class="item__post-img">
         </a>
         <div class="item__descr">
           <p class="item__text">
@@ -50,8 +50,8 @@
           <div class="item__post-info">
             <p class="item__comments-counter">{{ comments | count }} комментария</p>
             <div class="item__counter">
-              <img src="../../static/img/eye.png" alt="" class="item__counter-icon" width="26">
-              <span class="item__counter-text">{{ posts.views_count }}</span>
+              <img src="/static/img/eye.png" alt="" class="item__counter-icon" width="26">
+              <span class="item__counter-text">{{ post.views_count }}</span>
             </div>
           </div>
           <div class="item__comments">

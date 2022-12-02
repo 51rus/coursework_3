@@ -32,9 +32,9 @@ def search_page():
     Поиск по вхождению ключевого слова
     """
     # передаём аргумент
-    query = request.args.get('s')
+    words = request.args.get('s')
     # получаем посты по определённому слову
-    found_posts = posts.search_for_posts(query)
+    found_posts = posts.search_for_posts(words)
     return render_template('search.html', posts=found_posts)
 
 
